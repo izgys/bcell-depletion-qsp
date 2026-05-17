@@ -1,0 +1,41 @@
+# Physiological parameters for the B cell depletion QSP model
+# All rates in 1/day, concentrations in ng/mL, cell counts in cells/uL
+#
+# Sources:
+#   Tough & Sprent 1994  : d_blood (blood B cell turnover)
+#   Macallan et al. 2005 : d_tissue (tissue B cell turnover)
+#   Bleyzac et al. 2001  : k_export (BM export rate)
+#   Shen et al. 2004     : k_tissue, k_recirculate (trafficking rates)
+
+# --- bone marrow ---
+k_prod: 150.0        # B cell production rate (cells/uL/day)
+                     # set to maintain physiological steady state ~250 cells/uL blood
+k_export: 0.08       # BM -> blood export rate (1/day)
+                     # Bleyzac et al. 2001
+d_bm: 0.02           # BM natural death rate (1/day)
+                     # precursor half-life ~35 days
+
+# --- peripheral blood ---
+d_blood: 0.03        # blood B cell natural death rate (1/day)
+                     # half-life ~23 days, Tough & Sprent 1994
+
+# --- lymphoid tissue ---
+d_tissue: 0.01       # tissue B cell natural death rate (1/day)
+                     # half-life ~69 days, Macallan et al. 2005
+f_tissue: 0.4        # tissue drug penetration factor (dimensionless, 0-1)
+                     # rituximab penetrates lymphoid tissue at ~40% of blood level
+                     # reflects restricted antibody distribution across vessel walls
+
+# --- trafficking ---
+k_tissue: 0.5        # blood -> tissue trafficking rate (1/day)
+                     # Shen et al. 2004
+k_recirculate: 0.3   # tissue -> blood recirculation rate (1/day)
+                     # Shen et al. 2004
+
+# --- PD parameters ---
+Emax: 0.85           # maximum killing rate (1/day)
+                     # ~85% of maximum theoretical killing at full saturation
+EC50: 10.0           # concentration for 50% max killing (ng/mL)
+                     # Quartier et al. 2003
+n: 1.2               # Hill coefficient (dimensionless)
+                     # slightly above 1: mild cooperativity

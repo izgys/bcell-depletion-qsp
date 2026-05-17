@@ -1,0 +1,19 @@
+# Rituximab PK parameters — two-compartment IV model
+# Source: Mager & Jusko 2001, Quartier et al. 2003
+#
+# Units:
+#   CL : mL/day
+#   V1 : mL
+#   V2 : mL
+#   Q  : mL/day
+#
+# Note: rituximab is a large monoclonal antibody (~150 kDa)
+# Low V1 reflects limited distribution beyond plasma
+# Low Q reflects slow tissue penetration
+# CL includes target-mediated elimination via CD20 internalisation
+
+CL: 230.0     # clearance (mL/day)
+              # terminal half-life ~20 days at these parameters
+V1: 3600.0    # central volume (mL) — close to plasma volume (~3.5L)
+V2: 4200.0    # peripheral volume (mL)
+Q: 190.0      # inter-compartmental clearance (mL/day)

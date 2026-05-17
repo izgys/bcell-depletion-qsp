@@ -1,0 +1,31 @@
+# Dosing schedules for anti-CD20 therapy
+# Units: dose_mg in mg, duration_h in hours, start_day in days
+
+# Standard rituximab regimen for rheumatoid arthritis (RA)
+# Two infusions of 1000mg separated by 14 days
+# Mager & Jusko 2001
+rituximab_RA:
+  doses:
+    - start_day: 0
+      dose_mg: 1000.0
+      duration_h: 4.5
+    - start_day: 14
+      dose_mg: 1000.0
+      duration_h: 4.5
+
+# Rituximab regimen for non-Hodgkin lymphoma (NHL)
+# Four weekly infusions of 375mg/m2 (assuming 1.8m2 body surface area)
+rituximab_NHL:
+  doses:
+    - start_day: 0
+      dose_mg: 675.0
+      duration_h: 6.0
+    - start_day: 7
+      dose_mg: 675.0
+      duration_h: 4.5
+    - start_day: 14
+      dose_mg: 675.0
+      duration_h: 4.5
+    - start_day: 21
+      dose_mg: 675.0
+      duration_h: 4.5
