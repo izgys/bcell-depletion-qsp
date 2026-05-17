@@ -8,7 +8,7 @@
 #   Shen et al. 2004     : k_tissue, k_recirculate (trafficking rates)
 
 # --- bone marrow ---
-k_prod: 150.0        # B cell production rate (cells/uL/day)
+k_prod: 11.5        # B cell production rate (cells/uL/day)
                      # set to maintain physiological steady state ~250 cells/uL blood
 k_export: 0.08       # BM -> blood export rate (1/day)
                      # Bleyzac et al. 2001
@@ -29,7 +29,7 @@ f_tissue: 0.4        # tissue drug penetration factor (dimensionless, 0-1)
 # --- trafficking ---
 k_tissue: 0.5        # blood -> tissue trafficking rate (1/day)
                      # Shen et al. 2004
-k_recirculate: 0.3   # tissue -> blood recirculation rate (1/day)
+k_recirculate: 0.3  # tissue -> blood recirculation rate (1/day)
                      # Shen et al. 2004
 
 # --- PD parameters ---
