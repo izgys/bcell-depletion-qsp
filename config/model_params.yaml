@@ -35,7 +35,7 @@ k_recirculate: 0.3  # tissue -> blood recirculation rate (1/day)
 # --- PD parameters ---
 Emax: 0.85           # maximum killing rate (1/day)
                      # ~85% of maximum theoretical killing at full saturation
-EC50: 10.0           # concentration for 50% max killing (ng/mL)
+EC50: 10000.0           # concentration for 50% max killing (ng/mL)
                      # Quartier et al. 2003
 n: 1.2               # Hill coefficient (dimensionless)
                      # slightly above 1: mild cooperativity
