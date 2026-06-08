@@ -1,0 +1,11 @@
+# don't copy these into the Docker image
+scratch/
+.venv/
+mlruns/
+data/raw/
+data/processed/
+notebooks/
+.git/
+__pycache__/
+*.pyc
+.pytest_cache/
